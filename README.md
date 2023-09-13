@@ -2,7 +2,7 @@
 
 ## Why I Made It
 
-As someone who loves working with keyboard shortcuts and avoids using the mouse whenever possible, I found myself often needing to copy the output of terminal commands. The traditional way of doing this involves using the mouse to highlight the output and then copying it, which can be a bit tedious. So, I decided to create a shortcut that allows me to both display a command's output in the terminal and copy it to the clipboard using only the keyboard. If you're like me and prefer using keyboard shortcuts, you might find this shortcut useful as well.
+As someone who loves working with keyboard shortcuts and avoids using the mouse whenever possible, I found myself often needing to copy the output of terminal commands. The traditional way of doing this involves using the mouse to highlight the output and then copying it, which can be a bit tedious. So, I decided to create a shortcut that allows me to both display a command's output in the terminal and copy it to the clipboard using only the keyboard. If you're like me and prefer using keyboard shortcuts, you might find this useful as well.
 
 ## How to Set It Up
 
@@ -51,5 +51,15 @@ echo -e "\n#Clip alias\nalias xclip='xclip -selection clipboard'\nalias clip='te
 This command will append the function and alias to the end of the `/etc/zsh/zshrc` file. Remember that modifying the `/etc/zsh/zshrc` file will affect all users on your system who use Zsh.
 
 Also, remember that you'll need to run `source /etc/zsh/zshrc` or start a new shell session to make these system-wide changes take effect.
+
+## Appending Text To A File In One Command
+
+To append text to a file in one command, you can use this format:
+
+```bash
+echo -e "your text here" | sudo tee -a /path/to/your/file
+```
+
+In this command, `echo -e "your text here"` generates the text you want to append, and `sudo tee -a /path/to/your/file` appends that text to the end of your specified file.
 
 Enjoy your new shortcuts! 😊
